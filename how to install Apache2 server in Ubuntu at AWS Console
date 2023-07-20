@@ -1,0 +1,38 @@
+Sure, here are the steps on how to install Apache2 server in Ubuntu at AWS Console step by step:
+
+1. *Log in to the AWS Management Console.*
+2. *Select the EC2 service.*
+3. *Click on the Instances tab.*
+4. *Select the instance that you want to install Apache2 on.*
+5. *Click on the Connect button.*
+6. *In the Connect to your instance dialog, select the SSH method.*
+7. *Copy the Public DNS address of your instance.*
+8. *Open a terminal window on your local machine.*
+9. *ssh `<public-dns-address>`*
+10. *Once you are connected to your instance, run the following command to update your system packages:*
+
+
+sudo apt update
+
+
+11. Run the following command to install Apache2:**
+
+
+sudo apt install apache2
+
+
+12. Check the status of Apache2 by running the following command:**
+
+
+sudo systemctl status apache2
+
+
+13. Enable Apache2 to start at boot by running the following command:**
+
+
+sudo systemctl enable apache2
+
+
+14. Open your web browser and go to `http://<public-dns-address>`.**
+
+You should see the default Apache2 welcome page.
